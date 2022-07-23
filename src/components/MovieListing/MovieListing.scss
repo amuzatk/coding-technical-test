@@ -1,0 +1,88 @@
+// @import "../../common/colors.scss";
+
+// .movie-list,
+// .shows-list {
+//   margin: 20px 0;
+// h2 {
+//   color: $font-secondary;
+//   margin-bottom: 10px;
+//   font-weight: 400;
+// }
+// }
+
+.movie-wrapper {
+  margin-top: -25px;
+}
+
+.top-image {
+  position: relative;
+
+  .rectangle {
+    width: 100%;
+  }
+}
+.text-image {
+  position: absolute;
+  width: 490px;
+  height: 282px;
+  left: 72px;
+  top: 120px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 550;
+  font-size: 65px;
+  line-height: 87px;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+.search-ba {
+  input {
+    width: 90%;
+    height: 50px;
+    margin-left: 70px;
+    font-size: 28px;
+    padding: 5px;
+  }
+
+  h3 {
+    margin-top: 30px;
+    margin-left: 70px;
+    width: 77px;
+    height: 31px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+  }
+
+  h2 {
+    color: red;
+    margin-left: 370px;
+  }
+}
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 15px;
+}
+
+.item,
+.item-2 {
+  min-height: 25rem;
+  width: 17rem;
+  padding: 10px;
+}
+
+.inner-carousel,
+.inner-carousel-2 {
+  display: flex;
+}
+
+.carousel,
+.carousel-2 {
+  cursor: grab;
+  overflow: hidden;
+  margin: 0 2%;
+}

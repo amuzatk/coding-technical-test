@@ -1,0 +1,67 @@
+@import "../../common/colors.scss";
+
+.header {
+  // position: absolute;
+  width: 1440px;
+  // height: 340px;
+  // left: 0px;
+  // top: 0px;
+
+  // background-color: $secondary-color;
+  height: 140px;
+  border: #ffffff;
+  background-color: #292929;
+  // padding: 0px 40px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+}
+
+.logo {
+  // color: $font-primary;
+  // font-size: 20px;
+  // font-weight: 600;
+
+  position: absolute;
+  width: 193px;
+  height: 60px;
+  left: 77px;
+  top: 40px;
+}
+
+.user-image,
+.user-image img {
+  display: none;
+  width: 38px;
+  height: 38px;
+}
+
+.search-bar {
+  display: none;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  form {
+    display: none;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+
+    button {
+      display: none;
+      padding: 0px 8px;
+      font-size: 20px;
+      cursor: pointer;
+      height: 38px;
+    }
+  }
+  input {
+    display: none;
+    font-size: 18px;
+    width: 100%;
+    height: 38px;
+    padding: 5px 5px 5px 10px;
+    outline: none;
+  }
+}
