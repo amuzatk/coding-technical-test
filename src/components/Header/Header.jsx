@@ -26,8 +26,9 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        {/* <Link> */} <img src={Logo} alt="Logo" /> {/* </Link> */}
-        {/* <Link to="/">Movie App </Link> */}
+        <a href="/">
+          <img src={Logo} alt="Logo" />
+        </a>
       </div>
       <div className="search-bar">
         <form onSubmit={submitHandler}>
