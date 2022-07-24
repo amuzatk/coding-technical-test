@@ -3,35 +3,20 @@
 .card-item {
   width: 100%;
   height: 100%;
-  // border-radius: 2rem;
-  // pointer-events: none;
   cursor: pointer;
   transition: all 0.3s;
   padding: 20px;
-
-  // &:hover {
-  //   transform: scale(1.1);
-  //   transition: all 0.3s;
-  // }
 }
 
 .card-inner {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  // padding: 20px;
   padding-top: 0px;
   gap: 4px;
-  // cursor: grab;
-
   width: 200px;
   height: 100px;
-
-  // margin-left: 10px;
-
-  // background: #000000;
   border-radius: 12px;
-  // border: 2px solid yellow;
   margin-top: -15px;
   margin-left: -15px;
 }
@@ -46,17 +31,3 @@
     margin-left: -7px;
   }
 }
-
-// .card-bottom {
-//   padding: 20px;
-// }
-
-// .card-info {
-//   color: $font-primary;
-
-//   h4 {
-//     font-size: 22px;
-//     font-weight: 400;
-//     margin-bottom: 10ox;
-//   }
-// }

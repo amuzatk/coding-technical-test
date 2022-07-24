@@ -67,9 +67,8 @@ const MovieListing = () => {
         </div>
 
         <motion.div className="carousel">
-          <h2>Movies</h2>
+          <h2>Movie</h2>
           <motion.div
-            // whileTap={{ cursor: "grabbing" }}
             ref={carousel}
             drag="x"
             dragConstraints={{
@@ -97,9 +96,8 @@ const MovieListing = () => {
         </motion.div>
 
         <motion.div className="carousel-2">
-          <h2>Shows</h2>
+          <h2>Series</h2>
           <motion.div
-            // whileTap={{ cursor: "grabbing" }}
             ref={carousel}
             drag="x"
             dragConstraints={{
