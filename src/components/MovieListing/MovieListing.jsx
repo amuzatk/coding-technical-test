@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
-import Slider from "react-slick";
-import { Settings } from "../../common/settings";
 import { useSelector } from "react-redux";
 import {
   fetchAsyncMovies,
@@ -19,10 +17,17 @@ const MovieListing = () => {
 
   const carousel = useRef();
 
+  const setNewWidth = useCallback(() => {
+    console.log(carousel.current?.scrollWidth);
+    setWidth(carousel.current?.scrollWidth || 0);
+  }, [carousel]);
+
   useEffect(() => {
-    // console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
-    setWidth(carousel.current.scrollWidth + carousel.current.offsetWidth);
-  }, []);
+    window.addEventListener("resize", setNewWidth);
+    return () => {
+      window.removeEventListener("resize", setNewWidth);
+    };
+  }, [carousel]);
 
   const dispatch = useDispatch();
 
@@ -61,15 +66,16 @@ const MovieListing = () => {
           </form>
         </div>
 
-        <motion.div
-          ref={carousel}
-          whileTap={{ cursor: "grabbing" }}
-          className="carousel"
-        >
+        <motion.div className="carousel">
           <h2>Movies</h2>
           <motion.div
+            // whileTap={{ cursor: "grabbing" }}
+            ref={carousel}
             drag="x"
-            dragConstraints={{ right: 0, left: -width }}
+            dragConstraints={{
+              right: 0,
+              left: -(width + carousel.current?.clientWidth || 0),
+            }}
             className="inner-carousel"
           >
             {!(movies.Search && movies.Search.length > 0) ? (
@@ -78,7 +84,11 @@ const MovieListing = () => {
               </div>
             ) : (
               movies.Search.map((movie, index) => (
-                <motion.div key={index} className="item">
+                <motion.div
+                  whileTap={{ cursor: "grabbing" }}
+                  key={index}
+                  className="item"
+                >
                   <MovieCard key={index} data={movie} />
                 </motion.div>
               ))
@@ -86,15 +96,16 @@ const MovieListing = () => {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          ref={carousel}
-          whileTap={{ cursor: "grabbing" }}
-          className="carousel-2"
-        >
+        <motion.div className="carousel-2">
           <h2>Shows</h2>
           <motion.div
+            // whileTap={{ cursor: "grabbing" }}
+            ref={carousel}
             drag="x"
-            dragConstraints={{ right: 0, left: -width }}
+            dragConstraints={{
+              right: 0,
+              left: -(width + carousel.current?.clientWidth || 0),
+            }}
             className="inner-carousel-2"
           >
             {!(shows.Search && shows.Search.length > 0) ? (
@@ -103,7 +114,11 @@ const MovieListing = () => {
               </div>
             ) : (
               shows.Search.map((movie, index) => (
-                <motion.div key={index} className="item-2">
+                <motion.div
+                  key={index}
+                  whileTap={{ cursor: "grabbing" }}
+                  className="item-2"
+                >
                   <MovieCard key={index} data={movie} />
                 </motion.div>
               ))
