@@ -171,37 +171,52 @@ $breakpoint-tablet: 320px;
 
   .text-image {
     position: absolute;
-    width: 130px;
+    width: 230px;
     height: 23px;
     left: 45px;
     top: 130px;
 
-    font-weight: 400;
+    font-weight: 500;
     font-size: 20px;
     line-height: 23px;
     color: #ffffff;
-    // color: #000000;
 
-    // width: 210px;
-    // height: 23px;
-    // left: 28px;
-    // top: 472px;
+    .some {
+      position: relative;
+      left: 6px;
+      top: 0px;
+    }
+  }
 
-    .watch {
-      // position: absolute;
-      // display: flex;
-      // flex-direction: row;
+  .search-ba {
+    input {
+      width: 80%;
+      border: 1px solid #312222;
+      margin-left: 30px;
+      height: 30px;
+      font-size: 28px;
+      padding: 5px;
+    }
 
-      .some {
-        position: relative;
-        left: 80px;
-        top: -22px;
-      }
+    h3 {
+      margin-left: 30px;
+      width: 51px;
+      height: 21px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
 
-      .inc {
-        position: relative;
-        left: 100px;
-      }
+  .carousel,
+  .carousel-2 {
+    // overflow: hidden;
+    // margin: 2% 2%;
+
+    h2 {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
     }
   }
 }
