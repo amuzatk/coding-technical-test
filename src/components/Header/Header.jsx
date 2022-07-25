@@ -5,7 +5,7 @@ import {
   fetchAsyncMovies,
   fetchAsyncShows,
 } from "../../features/movies/movieSlice";
-import User from "../../images/logo3.png";
+import Iphone from "../../images/iphoneLogo.svg";
 import Logo from "../../images/Logo.svg";
 
 import "./Header.scss";
@@ -30,6 +30,9 @@ const Header = () => {
           <img src={Logo} alt="Logo" />
         </a>
       </div>
+      <a href="/">
+        <img src={Iphone} className="iphone" alt="iphone" />
+      </a>
       <div className="search-bar">
         <form onSubmit={submitHandler}>
           <input

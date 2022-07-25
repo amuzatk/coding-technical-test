@@ -1,32 +1,22 @@
 @import "../../common/colors.scss";
 
 .header {
-  // position: absolute;
   width: 1440px;
-  // height: 340px;
-  // left: 0px;
-  // top: 0px;
-
-  // background-color: $secondary-color;
   height: 140px;
   border: #ffffff;
   background-color: #292929;
-  // padding: 0px 40px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
 }
 
 .logo {
-  // color: $font-primary;
-  // font-size: 20px;
-  // font-weight: 600;
-
   position: absolute;
   width: 193px;
   height: 60px;
   left: 77px;
   top: 40px;
+}
+
+.iphone {
+  width: 0px;
 }
 
 .user-image,
@@ -63,5 +53,37 @@
     height: 38px;
     padding: 5px 5px 5px 10px;
     outline: none;
+  }
+}
+
+$breakpoint-tablet: 834px;
+@media (max-width: $breakpoint-tablet) {
+  .logo {
+    margin-left: 250px;
+  }
+}
+
+$breakpoint-tablet: 320px;
+@media (max-width: $breakpoint-tablet) {
+  .iphone {
+    position: absolute;
+    width: 108px;
+    height: 33px;
+    left: 100px;
+    top: 16px;
+  }
+
+  .logo {
+    display: none;
+    position: absolute;
+    width: 193px;
+    height: 60px;
+    left: 0px;
+    top: 40px;
+  }
+
+  .header {
+    width: 321px;
+    height: 67px;
   }
 }

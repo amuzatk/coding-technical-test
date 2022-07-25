@@ -20,6 +20,14 @@
   .rectangle {
     width: 100%;
   }
+
+  .ipad {
+    width: 0px;
+  }
+
+  .iphone-rec {
+    width: 0px;
+  }
 }
 .text-image {
   position: absolute;
@@ -34,6 +42,10 @@
   line-height: 87px;
   letter-spacing: -0.03em;
   color: #ffffff;
+
+  .thing {
+    display: none;
+  }
 }
 .search-ba {
   input {
@@ -56,17 +68,7 @@
     line-height: 31px;
     color: #000000;
   }
-
-  // h2 {
-  //   color: red;
-  //   margin-left: 370px;
-  // }
 }
-// .movie-container {
-//   display: grid;
-//   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-//   grid-gap: 15px;
-// }
 
 .item,
 .item-2 {
@@ -100,5 +102,106 @@
     font-size: 24px;
     line-height: 31px;
     color: #000000;
+  }
+}
+
+$breakpoint-tablet: 834px;
+@media (max-width: $breakpoint-tablet) {
+  .top-image {
+    position: relative;
+
+    .rectangle {
+      width: 100%;
+      display: none;
+    }
+
+    .ipad {
+      width: 100%;
+      margin-top: 23px;
+    }
+  }
+
+  .text-image {
+    left: 172px;
+    top: 130px;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 94px;
+    text-align: center;
+    letter-spacing: -0.05em;
+
+    .thing {
+      display: none;
+    }
+  }
+
+  .search-ba {
+    input {
+      width: 82%;
+      border: 2px solid #312222;
+      margin-left: 60px;
+    }
+
+    h3 {
+      margin-left: 60px;
+    }
+  }
+}
+
+$breakpoint-tablet: 320px;
+@media (max-width: $breakpoint-tablet) {
+  .top-image {
+    position: relative;
+
+    .rectangle {
+      display: none;
+      width: 100%;
+    }
+
+    .ipad {
+      display: none;
+      width: 0px;
+    }
+
+    .iphone-rec {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+
+  .text-image {
+    position: absolute;
+    width: 130px;
+    height: 23px;
+    left: 45px;
+    top: 130px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    // color: #000000;
+
+    // width: 210px;
+    // height: 23px;
+    // left: 28px;
+    // top: 472px;
+
+    .watch {
+      // position: absolute;
+      // display: flex;
+      // flex-direction: row;
+
+      .some {
+        position: relative;
+        left: 80px;
+        top: -22px;
+      }
+
+      .inc {
+        position: relative;
+        left: 100px;
+      }
+    }
   }
 }

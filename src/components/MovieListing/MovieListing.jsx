@@ -9,6 +9,9 @@ import {
 import { getAllMovies, getAllShows } from "../../features/movies/movieSlice";
 import MovieCard from "../MovieCard/MovieCard";
 import { ReactComponent as Rectangle } from "../../images/Rectangle 5.svg";
+import Ipad from "../../images/iPad.svg";
+import IphoneRectangle from "../../images/iPhoneRec.svg";
+
 import "./MovieListing.scss";
 
 const MovieListing = () => {
@@ -47,10 +50,16 @@ const MovieListing = () => {
       <div className="movie-wrapper">
         <div className="top-image">
           <Rectangle className="rectangle" />
+          <img src={Ipad} alt="Ipad" className="ipad" />
+          <img src={IphoneRectangle} alt="Iphone" className="iphone-rec" />
+
           <div className="text-image">
-            <p>Watch</p>
-            <p>something</p>
-            <p>incredible.</p>
+            <p className="watch">
+              Watch <span className="some">something</span>
+            </p>
+
+            <p className="thing">something</p>
+            <p className="inc">incredible.</p>
           </div>
         </div>
 
